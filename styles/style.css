@@ -9,13 +9,15 @@ body{
 }
 main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .container{
     background-color:#FFFFFF;
     width:870px;
     border-radius:5px;
     padding:30px;
+    margin-bottom: 21px;
 }
 hr{
     border: 1px solid #D1D1D1;
@@ -78,4 +80,67 @@ hr{
     color: #562EFF;
     font-size: 16px;
     text-decoration: none;
+}
+/*--------------------------
+     Latest-Courses styles
+--------------------------- */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    width:270px;
+}
+.course{
+    padding:20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(236, 235, 235);
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+.course-title{
+    margin-bottom:7px;
+    font-size: 20px;
+}
+.course-author{
+    color:red;
+}
+.course-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star{
+    font-size: 12px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.another-color{
+    color:#AEAEAE;
+}
+.course-duration{
+    color: #FF4A60;
+    background: #FFE4E8;
+    border-radius: 14.6913px;
+    Width:94.83px;
+    Height:29.38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------
+     Media Query
+--------------------- */
+@media only screen and (max-width:688px) {
+    .container{
+        width:100%;
+    }
+    .player, .blogs, .course{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
 }
